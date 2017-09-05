@@ -1,0 +1,92 @@
+<script src="../../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+<link rel="import" href="../../../bower_components/neon-animation/web-animations.html">
+
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../../../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../../../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../../../bower_components/paper-dropdown-menu/paper-dropdown-menu-shared-styles.html">
+
+<dom-module id="current-match">
+	<template>
+		<style is="custom-style" include="iron-flex iron-flex-alignment paper-dropdown-menu-shared-styles">
+			.input-container {
+				overflow: hidden;
+			}
+
+			.team-input-container paper-input:first-of-type {
+				float: left;
+				width: 60%;
+			}
+
+			.team-input-container paper-input:last-of-type {
+				float: right;
+				width: 30%;
+			}
+
+			.casters-input-container paper-dropdown-menu {
+				width: 47%;
+			}
+
+			.casters-input-container paper-dropdown-menu:first-of-type {
+				float: left;
+			}
+
+			.casters-input-container paper-dropdown-menu:last-of-type {
+				float: right;
+			}
+
+			paper-listbox {
+				width: 240px;
+			}
+
+			.button {
+				float: right;
+				margin-top: 20px;
+
+				background-color: #00bebe;
+				font-size: 13px;
+				font-weight: 500;
+				letter-spacing: 1px;
+				color: white;
+				padding: 15px 20px;
+			}
+		</style>
+
+		<div class="team-input-container">
+			<paper-input id="teamOneName" label="Team 1 Name" type="text" placeholder="e.g. CORE Embers"></paper-input>
+			<paper-input id="teamOneScore" label="Score" type="number" placeholder="2"></paper-input>
+		</div>
+
+		<div class="team-input-container">
+			<paper-input id="teamTwoName" label="Team 2 Name" type="text" placeholder="e.g. CORE Alpha"></paper-input>
+			<paper-input id="teamTwoScore" label="Score" type="number" placeholder="1"></paper-input>
+		</div>
+
+		<div class="casters-input-container">
+			<paper-dropdown-menu id="casterOne" label="Caster 1">
+				<paper-listbox slot="dropdown-content" select="1">
+					<paper-item>Axel</paper-item>
+					<paper-item>Champ</paper-item>
+					<paper-item>Adog</paper-item>
+				</paper-listbox>
+			</paper-dropdown-menu>
+
+			<paper-dropdown-menu id="casterTwo" label="Caster 2">
+				<paper-listbox slot="dropdown-content" select="1">
+					<paper-item>Axel</paper-item>
+					<paper-item>Champ</paper-item>
+					<paper-item>Adog</paper-item>
+				</paper-listbox>
+			</paper-dropdown-menu>
+		</div>
+
+		<paper-button on-click="saveMatch" class="button" raised>Save Changes</paper-button>
+	</template>
+
+	<script src="current-match.js"></script>
+</dom-module>
