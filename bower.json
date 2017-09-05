@@ -1,0 +1,31 @@
+{
+  "name": "current-match",
+  "description": "Dynamic broadcast graphics rendered in a browser",
+  "dependencies": {
+    "polymer": "^2.0.2",
+    "paper-input": "^2.0.2",
+    "paper-dropdown-menu": "^2.0.0",
+    "paper-item": "^2.0.0",
+    "paper-listbox": "^2.0.0",
+    "neon-animation": "^2.0.1",
+    "web-animations-js": "^2.3.1",
+    "paper-button": "^2.0.0"
+  },
+  "main": "",
+  "authors": [
+    "fragmate"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "nodecg-bundle"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
