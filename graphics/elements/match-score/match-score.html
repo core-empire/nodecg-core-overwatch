@@ -3,17 +3,105 @@
 <dom-module id="gfx-match-score">
 	<template>
 		<style>
+			#gfx-match-score-bar {
+				height: 50px;
+				line-height: 50px;
+			}
+
+			.team-bar-wrapper {
+				background-color: #1c1b20;
+				font-weight: 800;
+				letter-spacing: 1px;
+				position: absolute;
+				text-transform: uppercase;
+				width: 672px;
+			}
+
+			.team-bar-wrapper:first-of-type {
+				left: 0;
+			}
+
+			.team-bar-wrapper:last-of-type {
+				right: 0;
+			}
+
+			.team-bar-wrapper:first-of-type .team-bar {
+				padding-right: 150px;
+				text-align: right;
+			}
+
+			.team-bar-wrapper:last-of-type .team-bar {
+				padding-left: 150px;
+			}
+
+			.team-bar-wrapper:first-of-type .team-bar::after {
+				right: -10px;
+				transform: skew(-20deg);
+			}
+
+
+			.team-bar-wrapper:last-of-type .team-bar::after {
+				left: -10px;
+				transform: skew(20deg);
+			}
+
+			.team-bar-wrapper:first-of-type .score {
+				right: 35px;
+			}
+
+			.team-bar-wrapper:first-of-type .icon {
+				margin-left: 20px;
+			}
+
+			.team-bar-wrapper:last-of-type .icon {
+				margin-right: 20px;
+			}
+
+			.team-bar-wrapper:last-of-type .score {
+				left: 35px;
+			}
+
+			.team-bar {
+				position: relative;
+			}
+
+			.team-bar:after {
+				background-color: #6959bf;
+				content: '';
+				display: inline-block;
+				height: 50px;
+				position: absolute;
+				top: 0;
+				width: 100px;
+			}
+
+			.score {
+				display: inline-block;
+				position: absolute;
+				z-index: 9999;
+			}
+
+			.icon {
+				display: inline-block;
+				margin-bottom: -3px;
+			}
 		</style>
 
 		<div id="gfx-match-score-bar">
-			<div class="team-bar">
-				<span class="name">[[ teamOneName ]]</span>
-				<span class="score">[[ teamOneScore ]]</span>
+			<div class="team-bar-wrapper">
+				<div class="team-bar">
+					<span class="name">[[ teamOneName ]]</span>
+					<img src="assets/icon-attack.png" class="icon" width="23" />
+					<span class="score">[[ teamOneScore ]]</span>
+				</div>
 			</div>
 
-			<div class="team-bar">
-				<span class="name">[[ teamTwoName ]]</span>
-				<span class="score">[[ teamTwoScore ]]</span>
+			<div class="team-bar-wrapper">
+				<div class="team-bar">
+					<img src="assets/icon-defense.png" class="icon" width="21" />
+					<span class="name">[[ teamTwoName ]]</span>
+					<span class="score">[[ teamTwoScore ]]</span>
+				</div>
 			</div>
 		</div>
 	</template>
