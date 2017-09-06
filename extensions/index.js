@@ -2,14 +2,14 @@
 
 module.exports = function (nodecg) {
 	try {
-		require('./extensions/obs')(nodecg);
+		require('./obs')(nodecg);
 	} catch (e) {
 		nodecg.log.error('Failed to load "obs" lib:', e.stack);
 		process.exit(1);
 	}
 
 	try {
-		require('./extensions/match')(nodecg);
+		require('./match')(nodecg);
 	} catch (e) {
 		nodecg.log.error('Failed to load "match" lib:', e.stack);
 		process.exit(1);
