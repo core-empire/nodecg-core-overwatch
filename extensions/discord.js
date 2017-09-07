@@ -23,11 +23,11 @@ module.exports = function (nodecg) {
 
 	nodecg.listenFor('castersReady', function() {
 		// Authenticate with our bot
-		client.login('MzU1NDIyOTA5OTgyMDQ4MjU4.DJMmjw.xXVny44QOcVhWrN_KGt3RX9HpjM');
+		client.login(nodecg.bundleConfig.discordBot.token);
 
 		// Connect to the `Caster` voice channel with CORE Central
 		client.on('ready', () => {
-			let channel = client.channels.get('344592313256902656');
+			let channel = client.channels.get(nodecg.bundleConfig.discordBot.casterChannel);
 
 			console.log('Discord client is ready.');
 
