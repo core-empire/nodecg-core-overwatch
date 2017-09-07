@@ -17,6 +17,20 @@
 			}
 
 			nodecg.sendMessage('saveMatch', data);
+		},
+
+		switchSides: function() {
+			let teamOneName = this.$.teamOneName.value;
+			let teamOneScore = this.$.teamOneScore.value;
+			let teamTwoName = this.$.teamTwoName.value;
+			let teamTwoScore = this.$.teamTwoScore.value;
+
+			this.$.teamOneName.value = teamTwoName;
+			this.$.teamOneScore.value = teamTwoScore;
+			this.$.teamTwoName.value = teamOneName;
+			this.$.teamTwoScore.value = teamOneScore;
+
+			this.saveMatch();
 		}
 	});
 })();

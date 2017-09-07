@@ -15,8 +15,6 @@
 		},
 
 		ready: function() {
-			let that = this;
-
 			obsScenes.on('change', newVal => {
 				this.set('scenes', newVal);
 			});

@@ -14,4 +14,11 @@ module.exports = function (nodecg) {
 		nodecg.log.error('Failed to load "match" lib:', e.stack);
 		process.exit(1);
 	}
+
+	try {
+		require('./extensions/casters')(nodecg);
+	} catch (e) {
+		nodecg.log.error('Failed to load "casters" lib:', e.stack);
+		process.exit(1);
+	}
 }
