@@ -3,7 +3,9 @@
 const casters = require('../data/casters.json');
 
 module.exports = function (nodecg) {
-	const castersRep = nodecg.Replicant('casters', { defaultValue: { "data": casters, "names": [], "selected": [] }, persistent: false });
+	const castersRep = nodecg.Replicant('casters', { defaultValue: casters, persistent: false });
+	const casterNamesRep = nodecg.Replicant('casters:names', { defaultValue: [], persistent: false });
+	const castersSelectedRep = nodecg.Replicant('casters:selected', { defaultValue: [], persistent: false });
 
 	function fetchCaster(term) {
 		for (var caster in casters) {
@@ -16,7 +18,7 @@ module.exports = function (nodecg) {
 	}
 
 	function buildNames() {
-		let casterData = castersRep.value.data;
+		let casterData = castersRep.value;
 		let formattedCasters = [];
 
 		for (var caster in casterData) {
@@ -25,7 +27,7 @@ module.exports = function (nodecg) {
 			}
 		}
 
-		castersRep.value.names = formattedCasters;
+		casterNamesRep.value = formattedCasters;
 	}
 
 	nodecg.listenFor('setCasters', function(data) {
@@ -35,8 +37,8 @@ module.exports = function (nodecg) {
 			selectedCasters.push(fetchCaster(data[i]));
 		}
 
-		castersRep.value.selected = selectedCasters;
+		castersSelectedRep.value = selectedCasters;
 	});
-
+	
 	buildNames();
 };

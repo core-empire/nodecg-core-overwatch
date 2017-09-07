@@ -1,17 +1,23 @@
 {
 	"0": {
 		"name": "Axel",
+		"discord_id": "83383816223199232",
 		"twitter_handle": "CORE_OW_Axel",
-		"avatar": ""
+		"avatar": "",
+		"speaking": false
 	},
 	"1": {
 		"name": "Fragmate",
+		"discord_id": "159712855266951168",
 		"twitter_handle": "fragmate_tv",
-		"avatar": ""
+		"avatar": "",
+		"speaking": false
 	},
 	"2": {
 		"name": "Fenris",
-		"twitter_handle": "",
-		"avatar": ""
+		"discord_id": "196091001662734336",
+		"twitter_handle": "fenris",
+		"avatar": "",
+		"speaking": false
 	}
 }

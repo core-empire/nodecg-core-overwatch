@@ -21,4 +21,11 @@ module.exports = function (nodecg) {
 		nodecg.log.error('Failed to load "casters" lib:', e.stack);
 		process.exit(1);
 	}
+
+	try {
+		require('./extensions/discord')(nodecg);
+	} catch (e) {
+		nodecg.log.error('Failed to load "discord" lib:', e.stack);
+		process.exit(1);
+	}
 }

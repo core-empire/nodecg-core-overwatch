@@ -1,0 +1,14 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+
+<dom-module id="caster-cards">
+	<template>
+		<style></style>
+
+		<template is="dom-repeat" items="{{casters}}">
+			<div class="caster-card">
+				[[item.name]] [[item.twitter_handle]] [[item.speaking]]
+		</template>
+	</template>
+
+	<script src="caster-cards.js"></script>
+</dom-module>
