@@ -1,5 +1,5 @@
 {
-  "lint": {
-    "rules": ["polymer-2"]
-  }
+  "lint": {
+    "rules": ["polymer-2-hybrid"]
+  }
 }

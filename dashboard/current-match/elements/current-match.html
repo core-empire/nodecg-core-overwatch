@@ -1,53 +1,51 @@
 <script src="../../../bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+<link rel="import" href="../../shared-styles/shared-styles.html">
+
 <link rel="import" href="../../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../../../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../../../bower_components/paper-styles/paper-styles.html">
 <link rel="import" href="../../../bower_components/paper-button/paper-button.html">
-<link rel="import" href="../../../bower_components/paper-item/paper-item.html">
 <link rel="import" href="../../../bower_components/paper-input/paper-input.html">
 
 <dom-module id="current-match">
 	<template>
-		<style is="custom-style" include="iron-flex iron-flex-alignment">
-			.input-container {
-				overflow: hidden;
+		<style include="shared-styles">
+			.team-input-container {
+				@apply --layout-horizontal;
+				@apply --layout-justified;
 			}
 
 			.team-input-container paper-input:first-of-type {
-				float: left;
+				@apply --layout-self-start;
+
 				width: 60%;
 			}
 
 			.team-input-container paper-input:last-of-type {
-				float: right;
+				@apply --layout-self-end;
+
 				width: 30%;
-			}
-
-			.button {
-				float: right;
-				margin-top: 20px;
-
-				background-color: #00bebe;
-				font-size: 13px;
-				font-weight: 500;
-				letter-spacing: 1px;
-				color: white;
-				padding: 15px 20px;
 			}
 		</style>
 
-		<div class="team-input-container">
-			<paper-input id="teamOneName" label="Team 1 Name" type="text" placeholder="e.g. CORE Embers"></paper-input>
-			<paper-input id="teamOneScore" label="Score" type="number" placeholder="2"></paper-input>
-		</div>
+		<div class="container">
+			<div class="container-body">
+				<div class="team-input-container">
+					<paper-input id="teamOneName" label="Team 1 Name" type="text" placeholder="e.g. CORE Embers"></paper-input>
+					<paper-input id="teamOneScore" label="Score" type="number" placeholder="2"></paper-input>
+				</div>
 
-		<div class="team-input-container">
-			<paper-input id="teamTwoName" label="Team 2 Name" type="text" placeholder="e.g. CORE Alpha"></paper-input>
-			<paper-input id="teamTwoScore" label="Score" type="number" placeholder="1"></paper-input>
-		</div>
+				<div class="team-input-container">
+					<paper-input id="teamTwoName" label="Team 2 Name" type="text" placeholder="e.g. CORE Alpha"></paper-input>
+					<paper-input id="teamTwoScore" label="Score" type="number" placeholder="1"></paper-input>
+				</div>
+			</div>
 
-		<paper-button on-click="switchSides">Switch Sides</paper-button>
-		<paper-button on-click="saveMatch" class="button" raised>Save Changes</paper-button>
+			<div class="container-footer">
+				<paper-button on-click="switchSides">Switch Sides</paper-button>
+				<paper-button on-click="saveMatch" class="button" raised>Save Changes</paper-button>
+			</div>
+		</div>
 	</template>
 
 	<script src="current-match.js"></script>

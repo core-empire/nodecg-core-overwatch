@@ -1,38 +1,39 @@
 <script src="../../../bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+<link rel="import" href="../../shared-styles/shared-styles.html">
 
 <link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../../../bower_components/paper-styles/paper-styles.html">
 <link rel="import" href="../../../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../../../bower_components/nodecg-typeahead-input/nodecg-typeahead-input.html">
 
 <dom-module id="caster-selection">
 	<template>
-		<style>
-			.button {
-				float: right;
-				margin-top: 20px;
+		<style include="shared-styles">
+			.casters-input-container {
+				@apply --layout-horizontal;
+				@apply --layout-justified;
+			}
 
-				background-color: #00bebe;
-				font-size: 13px;
-				font-weight: 500;
-				letter-spacing: 1px;
-				color: white;
-				padding: 15px 20px;
+			nodecg-typeahead-input {
+				min-width: 240px;
 			}
 		</style>
+		<div class="container">
+			<div class="casters-input-container">
+				<nodecg-typeahead-input
+					id="casterOne"
+					placeholder="Select a caster..."
+					replicant-name="casters:names"></nodecg-typeahead-input>
+				<nodecg-typeahead-input
+					id="casterTwo"
+					placeholder="Select a caster..."
+					replicant-name="casters:names"></nodecg-typeahead-input>
+			</div>
 
-		<div class="casters-input-container">
-			<nodecg-typeahead-input
-				id="casterOne"
-				placeholder="Select a caster..."
-				replicant-name="casters:names"></nodecg-typeahead-input>
-			<nodecg-typeahead-input
-				id="casterTwo"
-				placeholder="Select a caster..."
-				replicant-name="casters:names"></nodecg-typeahead-input>
-		</div>
-
-		<paper-button class="button" on-click="submitCasters" raised>Save Changes</paper-button>
+			<div class="container-footer">
+				<paper-button class="button" on-click="submitCasters" raised>Save Changes</paper-button>
+			</div>
 	</template>
 
 	<script src="caster-selection.js"></script>
