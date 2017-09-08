@@ -5,13 +5,89 @@
 
 <dom-module id="caster-cards">
 	<template>
-		<style></style>
+		<style>
+			.casters {
+				max-width: 560px;
+			}
 
-		<template is="dom-repeat" items="[[casters]]" mutable-data>
-			<div class="caster-card">
-				<span>[[item.name]]</span>
-			</div>
-		</template>
+			.casters-list {
+				list-style-type: none;
+				padding: 0;
+			}
+
+			.caster-card-wrapper {
+				display: flex;
+				align-items: center;
+
+				background-color: #342e52;
+				border: 4px solid #342e52;
+				border-radius: 200px;
+				height: 150px;
+				margin-bottom: 40px;
+				transition: border-color 0.2s ease-in-out;
+				padding: 20px;
+
+				box-sizing: border-box;
+			}
+
+			.caster-card-wrapper:last-of-type {
+				margin-bottom: 0;
+			}
+
+			.caster-card-wrapper[data-speaking] {
+				border-color: #00c3e2;
+			}
+
+			.avatar {
+				border-radius: 100px;
+				position: absolute;
+				left: 0;
+				top: -16px;
+			}
+
+			.caster-card {
+				position: relative;
+			}
+
+			.caster-card .caster-info {
+				margin-left: 140px;
+				margin-top: -5px;
+			}
+
+			.caster-card span {
+				display: block;
+			}
+
+			.caster-card .name {
+				font-size: 36px;
+				font-weight: 600;
+				margin-bottom: 10px;
+			}
+
+			.caster-card .twitter-handle {
+				color: #7669c0;
+				font-style: italic;
+				font-weight: 600;
+			}
+		</style>
+
+		<div class="casters">
+			<span class="label">Casters</span>
+
+			<ul class="casters-list">
+				<template is="dom-repeat" items="[[casters]]" mutable-data>
+					<li class="caster-card-wrapper" data-speaking$="[[item.speaking]]">
+						<div class="caster-card">
+							<img class="avatar" src="assets/caster_avatars/[[item.avatar]]" width="100" />
+							<div class="caster-info">
+								<span class="name">[[item.name]]</span>
+								<span class="twitter-handle">@[[item.twitter_handle]]</span>
+							</div>
+						</div>
+					</li>
+				</template>
+			</ul>
+		</div>
 	</template>
 
 	<script src="caster-cards.js"></script>

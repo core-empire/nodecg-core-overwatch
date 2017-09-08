@@ -43,9 +43,5 @@ module.exports = function (nodecg) {
 		castersSelectedRep.value = selectedCasters;
 	});
 
-	castersSelectedRep.on('change', function() {
-		console.log(castersSelectedRep.value);
-	});
-
 	buildNames();
 };

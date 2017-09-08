@@ -23,6 +23,7 @@
 		}
 
 		ready() {
+			super.ready();
 			casters.on('change', newVal => {
 				this.set('casters', newVal);
 			});
