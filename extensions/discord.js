@@ -27,7 +27,7 @@ module.exports = function (nodecg) {
 
 		// Connect to the `Caster` voice channel with CORE Central
 		client.on('ready', () => {
-			let channel = client.channels.get(nodecg.bundleConfig.discordBot.casterChannel);
+			let channel = client.channels.get(nodecg.bundleConfig.discordBot.privateChannel);
 
 			console.log('Discord client is ready.');
 

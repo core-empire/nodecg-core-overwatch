@@ -3,21 +3,31 @@
 
 	const casters = nodecg.Replicant('casters:selected');
 
-	Polymer({
-		is: 'caster-cards',
+	/**
+	 * @customElement
+	 * @polymer
+	 * @appliesMixin Polymer.MutableData
+	 */
+	class CasterCards extends Polymer.MutableData(Polymer.Element) {
+		static get is() {
+			return 'caster-cards';
+		}
 
-		properties: {
-			casters: {
-				type: Array,
-				value: []
-			}
-		},
+		static get properties() {
+			return {
+				casters: {
+					type: Array,
+					value: []
+				}
+			};
+		}
 
-		ready: function() {
+		ready() {
 			casters.on('change', newVal => {
-				alert('change');
 				this.set('casters', newVal);
 			});
 		}
-	});
+	}
+
+	customElements.define(CasterCards.is, CasterCards);
 })();
