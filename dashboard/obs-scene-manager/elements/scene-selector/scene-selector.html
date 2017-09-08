@@ -1,28 +1,13 @@
 <script src="../../../../bower_components/webcomponentsjs/webcomponents-loader.js"></script>
-<script src="../../../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-<link rel="import" href="../../../../bower_components/neon-animation/web-animations.html">
 
 <link rel="import" href="../../../../bower_components/polymer/polymer.html">
-<link rel="import" href="../../../../bower_components/polymer/lib/elements/dom-if.html">
-
 <link rel="import" href="../../../../bower_components/paper-styles/paper-styles.html">
 <link rel="import" href="../../../../bower_components/paper-button/paper-button.html">
-<link rel="import" href="../../../../bower_components/paper-item/paper-item.html">
-<link rel="import" href="../../../../bower_components/paper-listbox/paper-listbox.html">
-<link rel="import" href="../../../../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
-<link rel="import" href="../../../../bower_components/paper-dropdown-menu/paper-dropdown-menu-shared-styles.html">
+<link rel="import" href="../../../../bower_components/nodecg-typeahead-input/nodecg-typeahead-input.html">
 
 <dom-module id="obs-scene-selector">
 	<template>
-		<style is="custom-style" include="paper-dropdown-menu-shared-styles">
-			paper-dropdown-menu {
-				width: 65%;
-			}
-
-			paper-listbox {
-				width: 220px;
-			}
-
+		<style>
 			.button {
 				float: right;
 				background-color: #00bebe;
@@ -35,16 +20,13 @@
 			}
 		</style>
 
-		<paper-dropdown-menu id="sceneList" label="Displaying">
-			<paper-listbox slot="dropdown-content" select="1">
-				<template is="dom-repeat" items="{{scenes}}">
-					<paper-item>[[item]]</paper-item>
-				</template>
-			</paper-listbox>
-		</paper-dropdown-menu>
+		<nodecg-typeahead-input
+			id="sceneList"
+			placeholder="Select a scene..."
+			replicant-name="obs:sceneList"></nodecg-typeahead-input>
 
 		<paper-button on-click="switchScene" class="button" raised>Switch</paper-button>
-	</template> 
+	</template>
 
 	<script src="scene-selector.js"></script>
 </dom-module>

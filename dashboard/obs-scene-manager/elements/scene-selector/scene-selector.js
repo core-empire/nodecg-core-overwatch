@@ -2,27 +2,12 @@
 	'use strict';
 
 	const obsSocket = nodecg.Replicant('obs:websocket');
-	const obsScenes = nodecg.Replicant('obs:sceneList');
 
 	Polymer({
 		is: 'obs-scene-selector',
-
-		properties: {
-			scenes: {
-				type: Array,
-				value: []
-			}
-		},
-
-		ready: function() {
-			obsScenes.on('change', newVal => {
-				this.set('scenes', newVal);
-			});
-		},
-
 		switchScene: function() {
 			let selectedScene = this.$.sceneList.value;
-			
+
 			nodecg.sendMessage('obs:previewScene', selectedScene).then(() => {
 				console.log('successfully previewed ' + selectedScene);
 			}).catch(err => {
