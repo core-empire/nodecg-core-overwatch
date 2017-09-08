@@ -1,34 +1,13 @@
 <script src="../../../bower_components/webcomponentsjs/webcomponents-loader.js"></script>
-<script src="../../../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-<link rel="import" href="../../../bower_components/neon-animation/web-animations.html">
 
 <link rel="import" href="../../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../../bower_components/paper-styles/paper-styles.html">
 <link rel="import" href="../../../bower_components/paper-button/paper-button.html">
-<link rel="import" href="../../../bower_components/paper-item/paper-item.html">
-<link rel="import" href="../../../bower_components/paper-listbox/paper-listbox.html">
-<link rel="import" href="../../../bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
-<link rel="import" href="../../../bower_components/paper-dropdown-menu/paper-dropdown-menu-shared-styles.html">
+<link rel="import" href="../../../bower_components/nodecg-typeahead-input/nodecg-typeahead-input.html">
 
 <dom-module id="caster-selection">
-	<template>	
-		<style is="custom-style" include="paper-dropdown-menu-shared-styles">
-			.casters-input-container paper-dropdown-menu {
-				width: 47%;
-			}
-
-			.casters-input-container paper-dropdown-menu:first-of-type {
-				float: left;
-			}
-
-			.casters-input-container paper-dropdown-menu:last-of-type {
-				float: right;
-			}
-
-			paper-listbox {
-				width: 240px;
-			}
-
+	<template>
+		<style>
 			.button {
 				float: right;
 				margin-top: 20px;
@@ -43,21 +22,14 @@
 		</style>
 
 		<div class="casters-input-container">
-			<paper-dropdown-menu id="casterOne" label="Caster 1">
-				<paper-listbox slot="dropdown-content" select="1">
-					<template is="dom-repeat" items="{{casterNames}}">
-						<paper-item>[[item]]</paper-item>
-					</template>
-				</paper-listbox>
-			</paper-dropdown-menu>
-
-			<paper-dropdown-menu id="casterTwo" label="Caster 2">
-				<paper-listbox slot="dropdown-content" select="1">
-					<template is="dom-repeat" items="{{casterNames}}">
-						<paper-item>[[item]]</paper-item>
-					</template>
-				</paper-listbox>
-			</paper-dropdown-menu>
+			<nodecg-typeahead-input
+				id="casterOne"
+				placeholder="Select a caster..."
+				replicant-name="casters:names"></nodecg-typeahead-input>
+			<nodecg-typeahead-input
+				id="casterTwo"
+				placeholder="Select a caster..."
+				replicant-name="casters:names"></nodecg-typeahead-input>
 		</div>
 
 		<paper-button class="button" on-click="submitCasters" raised>Save Changes</paper-button>
