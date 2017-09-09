@@ -11,7 +11,8 @@
     "web-animations-js": "^2.3.1",
     "paper-button": "^2.0.0",
     "nodecg-widget-obs": "npm:nodecg-widget-obs#^3.2.2",
-    "nodecg-typeahead-input": "nodeCGElements/nodecg-typeahead-input#^2.0.1"
+    "nodecg-typeahead-input": "nodeCGElements/nodecg-typeahead-input#^2.0.1",
+    "datetime-picker": "fooloomanzoo/datetime-picker#^2.1.6"
   },
   "main": "",
   "authors": [
@@ -29,5 +30,14 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "resolutions": {
+    "polymer": "^2.0.2",
+    "webcomponentsjs": "^v1.0.2",
+    "iron-flex-layout": "^2.0.0",
+    "paper-styles": "^2.0.0",
+    "iron-resizable-behavior": "^2.0.0",
+    "neon-animation": "^2.0.1",
+    "iron-pages": "^2.0.0"
+  }
 }

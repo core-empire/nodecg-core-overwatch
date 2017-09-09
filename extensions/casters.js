@@ -3,17 +3,26 @@
 const casters = require('../data/casters.json');
 const clone = require('clone');
 
-module.exports = function (nodecg) {
-	const castersRep = nodecg.Replicant('casters', { defaultValue: casters, persistent: false });
-	const casterNamesRep = nodecg.Replicant('casters:names', { defaultValue: [], persistent: false });
-	const castersSelectedRep = nodecg.Replicant('casters:selected', { defaultValue: [], persistent: false });
+module.exports = function(nodecg) {
+	const castersRep = nodecg.Replicant('casters', {
+		defaultValue: casters,
+		persistent: false
+	});
+	const casterNamesRep = nodecg.Replicant('casters:names', {
+		defaultValue: [],
+		persistent: false
+	});
+	const castersSelectedRep = nodecg.Replicant('casters:selected', {
+		defaultValue: [],
+		persistent: false
+	});
 
 	function fetchCaster(term) {
 		let casterData = clone(casters);
 
 		for (var caster in casterData) {
 			if (casterData.hasOwnProperty(caster)) {
-				if(casterData[caster].name == term) {
+				if (casterData[caster].name == term) {
 					return casterData[caster];
 				}
 			}
@@ -25,7 +34,7 @@ module.exports = function (nodecg) {
 		let formattedCasters = [];
 
 		for (var caster in casterData) {
-			if(casterData.hasOwnProperty(caster)) {
+			if (casterData.hasOwnProperty(caster)) {
 				formattedCasters.push(casterData[caster].name);
 			}
 		}

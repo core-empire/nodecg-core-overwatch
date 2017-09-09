@@ -1,0 +1,20 @@
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../../bower_components/datetime-picker/datetime-picker.html">
+<link rel="import" href="../../shared-styles/shared-styles.html">
+
+<dom-module id="datetime-selection">
+  <template>
+    <style include="shared-styles"></style>
+
+    <div class="container">
+      <span class="label">Select a stream starting time</span>
+      <datetime-picker id="streamStartTime"></datetime-picker>
+    </div>
+
+    <div class="container-footer">
+      <paper-button class="button" on-click="setCountdown" raised>Set</paper-button>
+  </template>
+
+  <script src="datetime-selection.js"></script>
+</dom-module>
