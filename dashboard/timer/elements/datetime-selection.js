@@ -1,17 +1,33 @@
 (function() {
   'use strict';
 
+  const countdown = nodecg.Replicant('countdown');
+
   Polymer({
     is: 'datetime-selection',
 
-    ready: function() {
+    properties: {
+      countingDown: {
+        type: Boolean,
+        value: false
+      },
+      countDownValue: {
+        type: String,
+        value: ''
+      }
+    },
 
+    ready: function() {
+      countdown.on('change', newVal => {
+        this.set('countDownValue', newVal);
+      });
     },
 
     setCountdown: function() {
-      //let time = this.$.streamStartTime.date.value + " " + this.$.streamStartTime.time.value;
+      let time = this.$.streamStartTime.date + " " + this.$.streamStartTime.time;
 
-      nodecg.sendMessage('setCountdown', "2017-09-09 02:00:00.000");
+      this.set('countingDown', true);
+      nodecg.sendMessage('setCountdown', time);
     }
   });
 })();

@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function(nodecg) {
 	const countdownRep = nodecg.Replicant('countdown', {
 		defaultValue: false,

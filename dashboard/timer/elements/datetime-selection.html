@@ -1,19 +1,28 @@
 <link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../../bower_components/paper-styles/paper-styles.html">
 <link rel="import" href="../../../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../../../bower_components/datetime-picker/datetime-picker.html">
 <link rel="import" href="../../shared-styles/shared-styles.html">
 
 <dom-module id="datetime-selection">
   <template>
-    <style include="shared-styles"></style>
+    <style include="shared-styles paper-styles">
+
+    </style>
 
     <div class="container">
+      <template is="dom-if" if="{{countingDown}}">
+        <div id="activeCountDown">[[countDownValue]]</div>
+      </template>
+
       <span class="label">Select a stream starting time</span>
       <datetime-picker id="streamStartTime"></datetime-picker>
     </div>
 
     <div class="container-footer">
       <paper-button class="button" on-click="setCountdown" raised>Set</paper-button>
+    </div>
   </template>
 
   <script src="datetime-selection.js"></script>

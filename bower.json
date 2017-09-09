@@ -12,7 +12,8 @@
     "paper-button": "^2.0.0",
     "nodecg-widget-obs": "npm:nodecg-widget-obs#^3.2.2",
     "nodecg-typeahead-input": "nodeCGElements/nodecg-typeahead-input#^2.0.1",
-    "datetime-picker": "fooloomanzoo/datetime-picker#^2.1.6"
+    "datetime-picker": "fooloomanzoo/datetime-picker#^2.1.6",
+    "nodecg-replicant": "NodeCGElements/nodecg-replicant#^1.0.1"
   },
   "main": "",
   "authors": [
