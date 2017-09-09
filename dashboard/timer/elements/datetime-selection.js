@@ -14,6 +14,10 @@
       countDownValue: {
         type: String,
         value: ''
+      },
+      today: {
+        type: String,
+        value: ''
       }
     },
 
@@ -21,6 +25,8 @@
       countdown.on('change', newVal => {
         this.set('countDownValue', newVal);
       });
+
+      this.set('today', new Date());
     },
 
     setCountdown: function() {

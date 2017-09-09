@@ -1,14 +1,12 @@
 <link rel="import" href="../../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../../bower_components/iron-flex-layout/iron-flex-layout.html">
-<link rel="import" href="../../../bower_components/paper-styles/paper-styles.html">
 <link rel="import" href="../../../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../../../bower_components/datetime-picker/datetime-picker.html">
 <link rel="import" href="../../shared-styles/shared-styles.html">
 
 <dom-module id="datetime-selection">
   <template>
-    <style include="shared-styles paper-styles">
-
+    <style include="shared-styles">
     </style>
 
     <div class="container">
@@ -17,7 +15,7 @@
       </template>
 
       <span class="label">Select a stream starting time</span>
-      <datetime-picker id="streamStartTime"></datetime-picker>
+      <datetime-picker id="streamStartTime" date="[[today]]"></datetime-picker>
     </div>
 
     <div class="container-footer">
