@@ -11,9 +11,7 @@
 				teamOneName: this.$.teamOneName.value,
 				teamOneScore: this.$.teamOneScore.value,
 				teamTwoName: this.$.teamTwoName.value,
-				teamTwoScore: this.$.teamTwoScore.value,
-				casterOne: this.$.casterOne.value,
-				casterTwo: this.$.casterTwo.value
+				teamTwoScore: this.$.teamTwoScore.value
 			}
 
 			nodecg.sendMessage('saveMatch', data);
