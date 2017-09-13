@@ -47,16 +47,14 @@
         "width": 4,
         "file": "casters/index.html",
         "headerColor": "#9f9bbd"
-      },
-      {
-        "name": "countdown",
-        "title": "Countdown",
-        "width": 3,
-        "file": "timer/index.html",
-        "headerColor": "#9f9bbd"
       }
     ],
     "graphics": [
+      {
+        "file": "start.html",
+        "width": 1920,
+        "height": 1080
+      },
       {
         "file": "match_in_progress.html",
         "width": 1920,
