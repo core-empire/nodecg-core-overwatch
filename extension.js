@@ -35,4 +35,11 @@ module.exports = function (nodecg) {
 			nodecg.log.error('Failed to load "countdown" lib', e.stack);
 			process.exit(1);
 	}
+
+	try {
+		require('./extensions/events')(nodecg);
+	} catch (e) {
+			nodecg.log.error('Failed to load "events" lib', e.stack);
+			process.exit(1);
+	}
 }

@@ -21,17 +21,10 @@
     "compatibleRange": "~0.9.0",
     "dashboardPanels": [
       {
-        "name": "obs",
-        "title": "OBS",
+        "name": "event-selection",
+        "title": "Select an Event",
         "width": 3,
-        "file": "obs/index.html",
-        "headerColor": "#9f9bbd"
-      },
-      {
-        "name": "obs-scene-manager",
-        "title": "OBS - Scene Manager",
-        "width": 3,
-        "file": "obs-scene-manager/index.html",
+        "file": "event-name/index.html",
         "headerColor": "#9f9bbd"
       },
       {
@@ -46,6 +39,20 @@
         "title": "Casters",
         "width": 4,
         "file": "casters/index.html",
+        "headerColor": "#9f9bbd"
+      },
+      {
+        "name": "obs",
+        "title": "OBS",
+        "width": 3,
+        "file": "obs/index.html",
+        "headerColor": "#9f9bbd"
+      },
+      {
+        "name": "obs-scene-manager",
+        "title": "OBS - Scene Manager",
+        "width": 3,
+        "file": "obs-scene-manager/index.html",
         "headerColor": "#9f9bbd"
       }
     ],

@@ -1,0 +1,25 @@
+<link rel="import" href="../../shared-styles/shared-styles.html">
+
+<link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../../../bower_components/nodecg-typeahead-input/nodecg-typeahead-input.html">
+
+<dom-module id="event-selection">
+  <template>
+    <style include="shared-styles"></style>
+
+    <label><strong>CORE</strong> e.g. Open</label>
+    <nodecg-typeahead-input
+      id="eventName"
+      placeholder="Select the event name..."
+      replicant-name="events:names"></nodecg-typeahead-input>
+
+      <div class="container-footer">
+        <paper-button class="button" on-click="setEvent" raised>Save Changes</paper-button>
+      </div>
+  </template>
+
+  <script src="event-selection.js"></script>
+</dom-module>

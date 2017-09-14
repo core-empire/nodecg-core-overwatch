@@ -13,11 +13,31 @@
 
   <style>
     body {
-      background-color: #13131C;
+      background-color: #14141E;
+      overflow: hidden;
+    }
+
+    .particle-holder {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+
+    .particle-holder video {
+      height: 100%;
+      opacity: 0.3;
+      width: 100%;
     }
   </style>
 </head>
 <body>
   <start-masthead></start-masthead>
+  <div class="particle-holder">
+    <video width="1920" height="1080" autoplay loop>
+      <source src="assets/particles.mp4" type="video/mp4">
+    </video>
+  </div>
 </body>
 </html>
