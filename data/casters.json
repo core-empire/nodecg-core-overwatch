@@ -17,7 +17,28 @@
 		"name": "Fenris",
 		"discord_id": "196091001662734336",
 		"twitter_handle": "fenris",
-		"avatar": "",
+		"avatar": "fragmate.png",
 		"speaking": false
+	},
+	"3": {
+		"name": "Adalo",
+		"discord_id": "149731993888882698",
+		"twitter_handle": "AdaloTheFirst",
+		"avatar": "adalo.png",
+		"speaking": "false"
+	},
+	"4": {
+		"name": "Saph",
+		"discord_id": "200786420032339968",
+		"twitter_handle": "saphthegreat",
+		"avatar": "saph.png",
+		"speaking": "false"
+	},
+	"5": {
+		"name": "Virus",
+		"discord_id": "111084410228482048",
+		"twitter_handle": "Ryan_Virus",
+		"avatar": "virus.png",
+		"speaking": "false"
 	}
 }
