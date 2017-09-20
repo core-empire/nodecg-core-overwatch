@@ -40,5 +40,19 @@
 		"twitter_handle": "Ryan_Virus",
 		"avatar": "virus.jpg",
 		"speaking": "false"
+	},
+	"6": {
+		"name": "Kittie",
+		"discord_id": "194566427259174912",
+		"twitter_handle": "kittie_gaming",
+		"avatar": "kittie.png",
+		"speaking": "false"
+	},
+	"7": {
+		"name": "Lulumeister",
+		"discord_id": "189552353773486091",
+		"twitter_handle": "lulumeister",
+		"avatar": "lulu.png",
+		"speaking": "false"
 	}
 }
