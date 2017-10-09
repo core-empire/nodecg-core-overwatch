@@ -3,7 +3,6 @@
 	/**
 	 * @customElement
 	 * @polymer
-	 * @appliesMixin Polymer.MutableData
 	 */
 	class LoadingIndicator extends Polymer.Element {
 		static get is() {

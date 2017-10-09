@@ -6,15 +6,15 @@ const clone = require('clone');
 module.exports = function(nodecg) {
 	const castersRep = nodecg.Replicant('casters', {
 		defaultValue: casters,
-		persistent: false
+		persistent: true
 	});
 	const casterNamesRep = nodecg.Replicant('casters:names', {
 		defaultValue: [],
-		persistent: false
+		persistent: true
 	});
 	const castersSelectedRep = nodecg.Replicant('casters:selected', {
 		defaultValue: [],
-		persistent: false
+		persistent: true
 	});
 
 	function fetchCaster(term) {
