@@ -5,17 +5,81 @@
 	<script src="https://use.typekit.net/xuu8gct.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-	<link rel="stylesheet" href="css/reset.css" />
-	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+	<link rel="import" href="../bower_components/polymer/lib/elements/custom-style.html">
 	<link rel="import" href="elements/caster-cards/caster-cards.html">
+	<link rel="import" href="elements/loading-indicator/loading-indicator.html">
 
-	<style is="custom-style">
-		body {
-			background-color: #14141E;
-		}
-	</style>
+	<custom-style>
+		<style>
+			html,
+			body {
+				height: 100%;
+			}
+
+			body {
+				background-color: #221f33;
+			}
+
+			.intermission {
+				@apply --layout-horizontal;
+				@apply --layout-justified;
+
+				height: 100%;
+			}
+
+			.scoreboard,
+			.casters {
+				box-sizing: border-box;
+				width: 50%;
+			}
+
+			.casters {
+				@apply --layout-self-center;
+
+				padding: 60px;
+			}
+
+			.casters .label {
+				color: #00c3e2;
+				display: block;
+				font-weight: 700;
+				font-size: 28px;
+				font-style: italic;
+				letter-spacing: 3px;
+				margin-bottom: 40px;
+				padding-left: 50px;
+				text-transform: uppercase;
+			}
+
+			.scoreboard {
+				@apply --layout-horizontal;
+				@apply --layout-center-justified;
+				@apply --layout-self-center;
+
+				background-color: #1b182b;
+				height: 600px;
+				width: 840px;
+			}
+
+			loading-indicator {
+				@apply --layout-self-center;
+			}
+		</style>
+	</custom-style>
 </head>
 <body>
-	<caster-cards></caster-cards>
+	<div class="intermission">
+		<div class="scoreboard">
+			<loading-indicator text="Teams getting ready."></loading-indicator>
+		</div>
+
+		<div class="casters">
+			<span class="label">Casters</span>
+			<caster-cards></caster-cards>
+		</div>
+	</div>
 </body>
 </html>
