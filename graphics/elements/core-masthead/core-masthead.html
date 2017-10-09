@@ -2,7 +2,7 @@
 <link rel="import" href="../../../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../loading-indicator/loading-indicator.html">
 
-<dom-module id="start-masthead">
+<dom-module id="core-masthead">
   <template>
     <style>
       .container {
@@ -30,6 +30,13 @@
         margin-bottom: 40px;
         text-transform: uppercase;
       }
+
+      .text {
+        color: #6959BF;
+        font-weight: 600;
+        font-size: 32px;
+        font-style: italic;
+      }
     </style>
 
     <div class="container">
@@ -37,10 +44,17 @@
         <img class="logo" src="assets/core_logomark.png" width="220" />
 
         <span id="eventNameText">[[eventName]]</span>
-        <loading-indicator text="Setting up matches."></loading-indicator>
+
+        <template is="dom-if" if="[[text]]">
+          <p class="text">[[text]]</p>
+        </template>
+
+        <template is="dom-if" if="[[loading]]">
+          <loading-indicator text="Setting up matches."></loading-indicator>
+        </template>
       </div>
     </div>
   </template>
 
-  <script src="start-masthead.js"></script>
+  <script src="core-masthead.js"></script>
 </dom-module>
