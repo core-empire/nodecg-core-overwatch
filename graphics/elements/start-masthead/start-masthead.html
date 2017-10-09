@@ -1,12 +1,45 @@
 <link rel="import" href="../../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../loading-indicator/loading-indicator.html">
 
 <dom-module id="start-masthead">
   <template>
     <style>
+      .container {
+        @apply --layout-vertical;
+        @apply --layout-center-justified;
 
+        height: 100%;
+      }
+
+      .content {
+        @apply --layout-self-center;
+
+        text-align: center;
+      }
+
+      .logo {
+        margin-bottom: 60px;
+      }
+
+      #eventNameText {
+        display: block;
+        font-size: 52px;
+        font-weight: 700;
+        letter-spacing: 8px;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+      }
     </style>
 
-    <span id="eventNameText">[[eventName]]</span>
+    <div class="container">
+      <div class="content">
+        <img class="logo" src="assets/core_logomark.png" width="220" />
+
+        <span id="eventNameText">[[eventName]]</span>
+        <loading-indicator text="Setting up matches."></loading-indicator>
+      </div>
+    </div>
   </template>
 
   <script src="start-masthead.js"></script>

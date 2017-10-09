@@ -12,6 +12,11 @@
   <link rel="import" href="elements/start-masthead/start-masthead.html">
 
   <style>
+    html,
+    body {
+      height: 100%;
+    }
+
     body {
       background-color: #14141E;
       overflow: hidden;
@@ -23,12 +28,18 @@
       position: absolute;
       top: 0;
       width: 100%;
+      z-index: -1;
     }
 
     .particle-holder video {
       height: 100%;
-      opacity: 0.3;
+      opacity: 0.2;
       width: 100%;
+    }
+
+    start-masthead {
+      position: relative;
+      z-index: 1;
     }
   </style>
 </head>
