@@ -5,6 +5,7 @@
 <link rel="import" href="../../../bower_components/paper-styles/paper-styles.html">
 <link rel="import" href="../../../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../../bower_components/nodecg-typeahead-input/nodecg-typeahead-input.html">
 
 <dom-module id="current-match">
 	<template>
@@ -14,13 +15,13 @@
 				@apply --layout-justified;
 			}
 
-			.team-input-container paper-input:first-of-type {
+			.team-input-container nodecg-typeahead-input {
 				@apply --layout-self-start;
 
 				width: 60%;
 			}
 
-			.team-input-container paper-input:last-of-type {
+			.team-input-container paper-input {
 				@apply --layout-self-end;
 
 				width: 30%;
@@ -30,12 +31,18 @@
 		<div class="container">
 			<div class="container-body">
 				<div class="team-input-container">
-					<paper-input id="teamOneName" label="Team 1 Name" type="text" placeholder="e.g. CORE Embers"></paper-input>
+					<nodecg-typeahead-input
+			      id="teamOneName"
+			      placeholder="Select team one..."
+			      replicant-name="teams:names"></nodecg-typeahead-input>
 					<paper-input id="teamOneScore" label="Score" type="number" placeholder="2"></paper-input>
 				</div>
 
 				<div class="team-input-container">
-					<paper-input id="teamTwoName" label="Team 2 Name" type="text" placeholder="e.g. CORE Alpha"></paper-input>
+					<nodecg-typeahead-input
+			      id="teamTwoName"
+			      placeholder="Select team two..."
+			      replicant-name="teams:names"></nodecg-typeahead-input>
 					<paper-input id="teamTwoScore" label="Score" type="number" placeholder="1"></paper-input>
 				</div>
 			</div>

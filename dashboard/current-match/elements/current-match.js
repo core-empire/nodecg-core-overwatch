@@ -1,8 +1,6 @@
 (function() {
 	'use strict';
 
-	const match = nodecg.Replicant('current-match');
-
 	Polymer({
 		is: 'current-match',
 
