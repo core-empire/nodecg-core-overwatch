@@ -8,10 +8,12 @@ module.exports = function(nodecg) {
 		defaultValue: casters,
 		persistent: true
 	});
+
 	const casterNamesRep = nodecg.Replicant('casters:names', {
 		defaultValue: [],
 		persistent: true
 	});
+	
 	const castersSelectedRep = nodecg.Replicant('casters:selected', {
 		defaultValue: [],
 		persistent: true

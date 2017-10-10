@@ -25,34 +25,41 @@
 		"discord_id": "149731993888882698",
 		"twitter_handle": "AdaloTheFirst",
 		"avatar": "adalo.png",
-		"speaking": "false"
+		"speaking": false
 	},
 	"4": {
 		"name": "Saph",
 		"discord_id": "200786420032339968",
 		"twitter_handle": "saphthegreat",
 		"avatar": "saph.jpg",
-		"speaking": "false"
+		"speaking": false
 	},
 	"5": {
 		"name": "Virus",
 		"discord_id": "111084410228482048",
 		"twitter_handle": "Ryan_Virus",
 		"avatar": "virus.jpg",
-		"speaking": "false"
+		"speaking": false
 	},
 	"6": {
 		"name": "Kittie",
 		"discord_id": "194566427259174912",
 		"twitter_handle": "kittie_gaming",
 		"avatar": "kittie.png",
-		"speaking": "false"
+		"speaking": false
 	},
 	"7": {
 		"name": "Lulumeister",
 		"discord_id": "189552353773486091",
 		"twitter_handle": "lulumeister",
 		"avatar": "lulu.png",
-		"speaking": "false"
+		"speaking": false
+	},
+	"8": {
+		"name": "LemonKiwi",
+		"discord_id": "",
+		"twitter_handle": "LemonKiwi_",
+		"avatar": "lemonkiwi.png",
+		"speaking": false
 	}
 }
